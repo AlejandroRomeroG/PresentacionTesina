@@ -4,6 +4,8 @@ subtitle: "La edad en el sistema financiero mexicano"
 format: 
   revealjs:
     theme: tema.scss
+    slide-number: true
+    show-slide-number: all 
 author: 
   - name: "Alejandro Romero González"
     email: "alejandro.romero@alumnos.cide.edu"

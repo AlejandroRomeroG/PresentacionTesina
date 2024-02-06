@@ -1,8 +1,12 @@
 // colors
 $body-bg: #FFFBEB !default;
 $body-color: #041E42 !default;
-$link-color: #1D5949 !default;
-$selection-bg: #D50032 !default;
+$link-color: #003B70 !default;
+$selection-bg: #4B9461 !default;
+.slide-number span {
+  color: #1D5949;
+}
+
 
 
 // headings
@@ -26,5 +30,4 @@ html * {
 
 .reveal .footer {
  color: #1D5949 !important;
-
 }
