@@ -1,0 +1,27 @@
+---
+title: "No es sólo un número:"
+subtitle: "La edad en el sistema financiero mexicano"
+format: 
+  revealjs:
+    theme: tema.scss
+author: 
+  - name: "Alejandro Romero González"
+    email: "alejandro.romero@alumnos.cide.edu"
+    affiliation: 
+      - name: "Centro de Investigación y Docencia Económicas"
+        city: "Ciudad de México, México"
+        url: https://www.cide.edu/
+logo: logo_cide.png
+---
+
+## Motivación
+
+-   Informar las políticas públicas
+-   Comprender factores y mecanismos que influyen en la inclusión financiera
+-   Promover la equidad
+-   Agenda 2030: “No dejar a nadie atrás”
+
+## Pregunta de investigación e hipótesis
+
+¿Existe discriminación por edad en el sistema financiero mexicano?
+Hay evidencia de discriminación sistemática por edad en el sector financiero, la cual se puede inferir a través de las respuestas de la ENIF.
