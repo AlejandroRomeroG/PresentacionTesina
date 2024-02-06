@@ -1,25 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&family=Tinos&display=swap');
+
 // colors
 $body-bg: #FFFBEB !default;
 $body-color: #041E42 !default;
 $link-color: #003B70 !default;
 $selection-bg: #4B9461 !default;
+$presentation-heading-color: #041E42 !default;
 .slide-number span {
   color: #1D5949;
 }
 
-
-
-// headings
-$presentation-heading-font: "Montserrat", sans-serif !default;
-$presentation-heading-color: #041E42 !default;
-
-
-
+// font
+$presentation-heading-font: "Tinos", inter-tight !default;
+div {
+  font-family: "Tinos", inter-tight !important;
+}
 
 // code blocks
 $code-block-border-color: #93a1a1 !default;
-
-
 
 /*-- scss:rules --*/
 
