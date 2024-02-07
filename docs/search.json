@@ -1,16 +1,121 @@
 [
   {
-    "objectID": "PresentacionTesina.html#motivación",
-    "href": "PresentacionTesina.html#motivación",
+    "objectID": "PresentacionTesina.html#motivaciones",
+    "href": "PresentacionTesina.html#motivaciones",
     "title": "No es sólo un número:",
-    "section": "Motivación",
-    "text": "Motivación\n\nInformar las políticas públicas\nComprender factores y mecanismos que influyen en la inclusión financiera\nPromover la equidad\nAgenda 2030: “No dejar a nadie atrás”"
+    "section": "Motivaciones",
+    "text": "Motivaciones\n\nAtender el envejecimiento poblacional.\nLlenar un vacío en la literatura existente.\nExplorar las dimensiones del concepto de edadismo en el ámbito financiero.\nInformar y mejorar políticas públicas.\nPromover la inclusión financiera."
   },
   {
     "objectID": "PresentacionTesina.html#pregunta-de-investigación-e-hipótesis",
     "href": "PresentacionTesina.html#pregunta-de-investigación-e-hipótesis",
     "title": "No es sólo un número:",
     "section": "Pregunta de investigación e hipótesis",
-    "text": "Pregunta de investigación e hipótesis\n¿Existe discriminación por edad en el sistema financiero mexicano? Hay evidencia de discriminación sistemática por edad en el sector financiero, la cual se puede inferir a través de las respuestas de la ENIF."
+    "text": "Pregunta de investigación e hipótesis\n¿Existen disparidades financieras significativas entre las personas adultas mayores \\(\\left(\\text{edad} \\geq 60\\right)\\) y las personas jóvenes \\(\\left(\\text{edad} \\leq 59\\right)\\) dentro del mercado financiero mexicano?\n\n\nPostulamos la existencia de estas desigualdades; no obstante, no asumimos que estos desfases sean intrínsecamente manifestaciones de edadismo. Es plausible que sean resultado de factores estructurales complejos.\n\n\nAdicionalmente, este trabajo se extendió para considerar la intersección de la edad y el sexo. De manera específica, investigamos cómo el sexo puede influir en las experiencias financieras de las personas mayores."
+  },
+  {
+    "objectID": "PresentacionTesina.html#revisión-de-literatura",
+    "href": "PresentacionTesina.html#revisión-de-literatura",
+    "title": "No es sólo un número:",
+    "section": "Revisión de literatura",
+    "text": "Revisión de literatura"
+  },
+  {
+    "objectID": "PresentacionTesina.html#datos",
+    "href": "PresentacionTesina.html#datos",
+    "title": "No es sólo un número:",
+    "section": "Datos",
+    "text": "Datos"
+  },
+  {
+    "objectID": "PresentacionTesina.html#variables-de-interés",
+    "href": "PresentacionTesina.html#variables-de-interés",
+    "title": "No es sólo un número:",
+    "section": "Variables de interés",
+    "text": "Variables de interés\n\nDependientes:\n\n¿Usted tiene un celular inteligente (smartphone)?\nLa última vez que no pudo cubrir sus gastos, ¿usted utilizó su tarjeta de crédito o solicitó un crédito en un banco o institución financiera?\nDe julio de 2020 a la fecha, ¿usted ahorró comprando animales o bienes?\nDe julio de 2020 a la fecha, ¿usted guardó dinero con familiares o personas conocidas?\nDe julio de 2020 a la fecha, ¿usted participó en una tanda?\nDe julio de 2020 a la fecha, ¿usted guardó dinero en su casa?\n¿Usted tiene cuenta o tarjeta de nómina (donde depositan su sueldo)?\n¿Usted tiene cuenta o tarjeta de pensión (donde depositan su pensión)?\n¿Usted tiene cuenta o tarjeta para recibir apoyos de gobierno?\n¿Usted tiene cuenta de ahorro?\n¿Con su cuenta o tarjeta para recibir apoyos de gobierno tiene tarjeta de débito (tarjeta de plástico con la que puede retirar dinero)?\nDe julio de 2020 a la fecha, ¿pidió prestado a sus amistades o personas conocidas?\nDe julio de 2020 a la fecha, ¿pidió prestado a sus familiares?\n¿Usted tiene tarjeta de crédito bancaria?\n¿Usted tiene crédito personal?\n\nIndependientes:\n\nEdad:\n\\[\\begin{array}{r@{}l}\n\\text{Cohorte}_{j = 1}\\;\\; & \\coloneqq \\left\\{\n\\begin{array}{ll}\n0 & \\text{si edad} \\leq 59, \\\\\n1 & \\text{si edad} \\geq 60.\n\\end{array}\n\\right.\n\\\\[0.2cm]\n\\text{Cohorte}_{j = 2}\\;\\; & \\coloneqq \\left\\{\n\\begin{array}{ll}\n0 & \\text{si edad} \\leq 59, \\\\\n1 & \\text{si } 60 \\leq \\text{edad} \\leq 69.\n\\end{array}\n\\right.\n\\\\[0.2cm]\n\\text{Cohorte}_{j = 3}\\;\\; & \\coloneqq \\left\\{\n\\begin{array}{ll}\n0 & \\text{si edad} \\leq 59, \\\\\n1 & \\text{si } 70 \\leq \\text{edad} \\leq 79.\n\\end{array}\n\\right.\n\\\\[0.2cm]\n\\text{Cohorte}_{j = 4}\\;\\; & \\coloneqq \\left\\{\n\\begin{array}{ll}\n0 & \\text{si edad} \\leq 59, \\\\\n1 & \\text{si edad} \\geq 80.\n\\end{array}\n\\right.\n\\end{array}\\]\nSexo (0 = Hombre, 1 = Mujer).\nTipo De Localidad: Los habitantes de áreas con una población inferior a 2500 habitantes se clasifican como rurales (0), mientras que los que viven en aquellas que superan esta cifra se consideran urbanos (1).\nClase Social: \\[\\begin{align*}\n\\text{Clase Social}_{k = 1} & \\coloneqq \\left\\{\n\\begin{array}{ll}\n1 & \\text{para clase media} \\\\\n& \\text{(ingreso mensual entre} \\\\\n& \\text{11,344 y 22,297 MXN)}, \\\\\n0 & \\text{en otro caso}.\n\\end{array}\n\\right. \\\\[0.2cm]\n\\text{Clase Social}_{k = 2} & \\coloneqq \\left\\{\n\\begin{array}{ll}\n1 & \\text{para clase alta} \\\\\n& \\text{(ingreso mensual mayor o} \\\\\n& \\text{igual a 22,298 MXN)}, \\\\\n0 & \\text{en otro caso}.\n\\end{array}\n\\right.\n\\end{align*}\\] Las observaciones con ambos indicadores en \\(0\\) pertenecen a la clase baja, identificada por un ingreso mensual menor o igual a 11,343 MXN.\nNivel De Escolaridad: \\[\\begin{align*}\n\\text{Niv. Esc.}_{l = 1} & \\coloneqq \\left\\{\n\\begin{array}{ll}\n1 & \\text{para educación media}, \\\\\n& \\text{que abarca: estudios técnicos} \\\\\n& \\text{con secundaria terminada}, \\\\\n& \\text{preparatoria o bachillerato}, \\\\\n0 & \\text{en otro caso}.\n\\end{array}\n\\right. \\\\[0.2cm]\n\\text{Niv. Esc.}_{l = 2} & \\coloneqq \\left\\{\n\\begin{array}{ll}\n1 & \\text{para educación superior}, \\\\\n& \\text{que comprende: normal básica}, \\\\\n& \\text{estudios técnicos con} \\\\\n& \\text{preparatoria terminada}, \\\\\n& \\text{licenciatura o ingeniería} \\\\\n& \\text{y posgrados como} \\\\\n& \\text{maestría o doctorado}, \\\\\n0 & \\text{en otro caso}.\n\\end{array}\n\\right.\n\\end{align*}\\] Cuando ambas variables son \\(0\\), podemos inferir que el encuestado solamente ha adquirido educación básica. Esta última incluye los siguientes niveles: ninguno, preescolar o kínder, primaria y secundaria."
+  },
+  {
+    "objectID": "PresentacionTesina.html#metodología",
+    "href": "PresentacionTesina.html#metodología",
+    "title": "No es sólo un número:",
+    "section": "Metodología",
+    "text": "Metodología\n\nEstadística descriptiva.\nDiferencias porcentuales simples y Probits (Average Marginal Effects).\nPropensity Score Matchings.\nDiferencias porcentuales simples y Probits (Average Marginal Effects).\nAnálisis de resultados."
+  },
+  {
+    "objectID": "PresentacionTesina.html#diferencias-porcentuales-simples-left12right",
+    "href": "PresentacionTesina.html#diferencias-porcentuales-simples-left12right",
+    "title": "No es sólo un número:",
+    "section": "Diferencias porcentuales simples \\(\\left(1/2\\right)\\)",
+    "text": "Diferencias porcentuales simples \\(\\left(1/2\\right)\\)\nPara identificar disparidades por edad:\n\nDivisión de los grupos en cuatro cohortes:\n\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(\\text{edad} \\geq 60\\right)\\).\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(60 \\leq \\text{edad} \\leq 69\\right)\\).\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(70 \\leq \\text{edad} \\leq 79\\right)\\).\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(\\text{edad} \\geq 80\\right)\\).\n\nCálculo de diferencias porcentuales simples: \\[\\text{Diferencias porcentuales} = \\%\\text{No tratados}_{\\text{Sí}} - \\%\\text{Tratados}_{\\text{Sí}}\\]"
+  },
+  {
+    "objectID": "PresentacionTesina.html#diferencias-porcentuales-simples-left22right",
+    "href": "PresentacionTesina.html#diferencias-porcentuales-simples-left22right",
+    "title": "No es sólo un número:",
+    "section": "Diferencias porcentuales simples \\(\\left(2/2\\right)\\)",
+    "text": "Diferencias porcentuales simples \\(\\left(2/2\\right)\\)\nPara identificar disparidades por sexo en las personas adultas mayores:\n\nDivisión de los grupos en cuatro cohortes:\n\n\\(\\left[\\text{edad} \\geq 60\\right]\\) No tratados (Hombres) vs. Tratadas (Mujeres).\n\\(\\left[60 \\leq \\text{edad} \\leq 69\\right]\\) No tratados (Hombres) vs. Tratadas (Mujeres).\n\\(\\left[70 \\leq \\text{edad} \\leq 79\\right]\\) No tratados (Hombres) vs. Tratadas (Mujeres).\n\\(\\left[\\text{edad} \\geq 80\\right]\\) No tratados (Hombres) vs. Tratadas (Mujeres).\n\nCálculo de diferencias porcentuales simples:\n\\[\\begin{split}\n\\text{Diferencias porcentuales} =& \\;\\%\\text{No tratados}_{\\text{Sí}} \\\\ & \\qquad\\qquad - \\%\\text{Tratadas}_{\\text{Sí}}\n\\end{split}\\]"
+  },
+  {
+    "objectID": "PresentacionTesina.html#probits",
+    "href": "PresentacionTesina.html#probits",
+    "title": "No es sólo un número:",
+    "section": "Probits",
+    "text": "Probits\nPara identificar disparidades por edad, controlando por sexo, tipo de localidad, clase social y nivel de escolaridad:\n\nDivisión de los grupos en cuatro cohortes:\n\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(\\text{edad} \\geq 60\\right)\\).\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(60 \\leq \\text{edad} \\leq 69\\right)\\).\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(70 \\leq \\text{edad} \\leq 79\\right)\\).\nNo tratados \\(\\left(\\text{edad} \\leq 59\\right)\\) vs. Tratados \\(\\left(\\text{edad} \\geq 80\\right)\\).\n\nEstimación de Probits: \\[\\begin{multline*}\nP\\left(\\text{Pregunta}_i = 1 \\mid \\mathbb{X}\\right) = \\Phi\\Biggl( \\beta_0 + \\beta_1 \\text{Cohorte}_j \\\\ + \\beta_2 \\left(\\text{Tipo De Localidad}\\right) + \\beta_3 \\text{Sexo} \\\\ + \\sum_{k=1}^{2} \\beta_{3+k} \\left(\\text{Clase Social}_{k}\\right) \\\\ + \\sum_{l=1}^{2} \\beta_{5+l} \\left(\\text{Nivel De Escolaridad}_{l}\\right) \\Biggr).\n\\end{multline*}\\]\nCálculo de Average Marginal Effects:\n\\[\\begin{split}\n\\text{AME}_{x_a} &= \\frac{1}{N} \\sum_{n=1}^{N} \\frac{\\partial \\left(P\\left(\\text{Pregunta}_i = 1 \\mid \\mathbb{X}\\right)\\right)}{\\partial x_a} \\\\ &= \\frac{1}{N} \\sum_{n=1}^{N} \\phi\\Biggl( \\beta_0 + \\beta_1 \\text{Cohorte}_{j,\\,n} \\\\ & \\quad\\quad+ \\beta_2 \\left(\\text{Tipo De Localidad}_n\\right) + \\beta_3 \\text{Sexo}_n \\\\ & \\quad\\quad+ \\sum_{k=1}^{2} \\beta_{3+k} \\left(\\text{Clase Social}_{k,\\,n}\\right) \\\\ & \\quad\\quad+ \\sum_{l=1}^{2} \\beta_{5+l} \\left(\\text{Nivel De Escolaridad}_{l,\\,n}\\right) \\Biggr) \\beta_a.\n\\end{split}\\]"
+  },
+  {
+    "objectID": "PresentacionTesina.html#resultados-left15right",
+    "href": "PresentacionTesina.html#resultados-left15right",
+    "title": "No es sólo un número:",
+    "section": "Resultados \\(\\left(1/5\\right)\\)",
+    "text": "Resultados \\(\\left(1/5\\right)\\)"
+  },
+  {
+    "objectID": "PresentacionTesina.html#resultados-left25right",
+    "href": "PresentacionTesina.html#resultados-left25right",
+    "title": "No es sólo un número:",
+    "section": "Resultados \\(\\left(2/5\\right)\\)",
+    "text": "Resultados \\(\\left(2/5\\right)\\)"
+  },
+  {
+    "objectID": "PresentacionTesina.html#resultados-left35right",
+    "href": "PresentacionTesina.html#resultados-left35right",
+    "title": "No es sólo un número:",
+    "section": "Resultados \\(\\left(3/5\\right)\\)",
+    "text": "Resultados \\(\\left(3/5\\right)\\)"
+  },
+  {
+    "objectID": "PresentacionTesina.html#resultados-left45right",
+    "href": "PresentacionTesina.html#resultados-left45right",
+    "title": "No es sólo un número:",
+    "section": "Resultados \\(\\left(4/5\\right)\\)",
+    "text": "Resultados \\(\\left(4/5\\right)\\)"
+  },
+  {
+    "objectID": "PresentacionTesina.html#resultados-left55right",
+    "href": "PresentacionTesina.html#resultados-left55right",
+    "title": "No es sólo un número:",
+    "section": "Resultados \\(\\left(5/5\\right)\\)",
+    "text": "Resultados \\(\\left(5/5\\right)\\)"
+  },
+  {
+    "objectID": "PresentacionTesina.html#discusión",
+    "href": "PresentacionTesina.html#discusión",
+    "title": "No es sólo un número:",
+    "section": "Discusión",
+    "text": "Discusión"
+  },
+  {
+    "objectID": "PresentacionTesina.html#limitaciones",
+    "href": "PresentacionTesina.html#limitaciones",
+    "title": "No es sólo un número:",
+    "section": "Limitaciones",
+    "text": "Limitaciones\n\nTamaño de muestra pequeño: baja representatividad de individuos de avanzada edad en la base de datos.\nFalta de datos por parte de la oferta."
+  },
+  {
+    "objectID": "PresentacionTesina.html#gracias-por-su-atención",
+    "href": "PresentacionTesina.html#gracias-por-su-atención",
+    "title": "No es sólo un número:",
+    "section": "¡Gracias por su atención!",
+    "text": "¡Gracias por su atención!"
   }
 ]

@@ -346,18 +346,257 @@ Alejandro Romero González
 </div>
 
 </section>
-<section id="motivación" class="slide level2">
-<h2>Motivación</h2>
+<section id="motivaciones" class="slide level2 center">
+<h2>Motivaciones</h2>
 <ul>
-<li>Informar las políticas públicas</li>
-<li>Comprender factores y mecanismos que influyen en la inclusión financiera</li>
-<li>Promover la equidad</li>
-<li>Agenda 2030: “No dejar a nadie atrás”</li>
+<li>Atender el envejecimiento poblacional.</li>
+<li>Llenar un vacío en la literatura existente.</li>
+<li>Explorar las dimensiones del concepto de <em>edadismo</em> en el ámbito financiero.</li>
+<li>Informar y mejorar políticas públicas.</li>
+<li>Promover la inclusión financiera.</li>
 </ul>
 </section>
-<section id="pregunta-de-investigación-e-hipótesis" class="slide level2">
-<h2>Pregunta de investigación e hipótesis</h2>
-<p>¿Existe discriminación por edad en el sistema financiero mexicano? Hay evidencia de discriminación sistemática por edad en el sector financiero, la cual se puede inferir a través de las respuestas de la ENIF.</p>
+<section id="pregunta-de-investigación-e-hipótesis" class="slide level2 center">
+<h2><strong>Pregunta de investigación</strong> e hipótesis</h2>
+<strong>¿Existen disparidades financieras significativas entre las personas adultas mayores <span class="math inline">\(\left(\text{edad} \geq 60\right)\)</span> y las personas jóvenes <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> dentro del mercado financiero mexicano?</strong>
+<p>
+</p>
+Postulamos la existencia de estas desigualdades; no obstante, no asumimos que estos desfases sean intrínsecamente manifestaciones de <em>edadismo</em>. Es plausible que sean resultado de factores estructurales complejos.
+<p>
+</p>
+<p>Adicionalmente, este trabajo se extendió para considerar la intersección de la edad y el sexo. De manera específica, investigamos cómo el sexo puede influir en las experiencias financieras de las personas mayores.</p>
+</section>
+<section id="revisión-de-literatura" class="slide level2">
+<h2>Revisión de literatura</h2>
+<div class="r-stack">
+<p><img data-src="img/Keynes.png" class="fragment" width="450" height="550"> <img data-src="img/LifeCycle.png" class="fragment" width="450" height="550"></p>
+<p><img data-src="img/NavaHam.png" class="fragment" width="450" height="550"> <img data-src="img/Ang.png" class="fragment" width="450" height="550"></p>
+<p><img data-src="img/HernandezMartinez.png" class="fragment" width="450" height="550"> <img data-src="img/Peterson.png" class="fragment" width="450" height="550"></p>
+<p><img data-src="img/Myers.png" class="fragment" width="450" height="550"> <img data-src="img/DunsonReed.png" class="fragment" width="450" height="550"></p>
+<p><img data-src="img/CNBV.png" class="fragment" width="550" height="620"></p>
+</div>
+</section>
+<section id="datos" class="slide level2">
+<h2>Datos</h2>
+<img data-src="img/enif2021.jpg" class="r-stretch">
+</section>
+<section id="variables-de-interés" class="slide level2 scrollable">
+<h2>Variables de interés</h2>
+<ul>
+<li><strong>Dependientes</strong>:
+<ol type="1">
+<li>¿Usted tiene un celular inteligente (smartphone)?</li>
+<li>La última vez que no pudo cubrir sus gastos, ¿usted utilizó su tarjeta de crédito o solicitó un crédito en un banco o institución financiera?</li>
+<li>De julio de 2020 a la fecha, ¿usted ahorró comprando animales o bienes?</li>
+<li>De julio de 2020 a la fecha, ¿usted guardó dinero con familiares o personas conocidas?</li>
+<li>De julio de 2020 a la fecha, ¿usted participó en una tanda?</li>
+<li>De julio de 2020 a la fecha, ¿usted guardó dinero en su casa?</li>
+<li>¿Usted tiene cuenta o tarjeta de nómina (donde depositan su sueldo)?</li>
+<li>¿Usted tiene cuenta o tarjeta de pensión (donde depositan su pensión)?</li>
+<li>¿Usted tiene cuenta o tarjeta para recibir apoyos de gobierno?</li>
+<li>¿Usted tiene cuenta de ahorro?</li>
+<li>¿Con su cuenta o tarjeta para recibir apoyos de gobierno tiene tarjeta de débito (tarjeta de plástico con la que puede retirar dinero)?</li>
+<li>De julio de 2020 a la fecha, ¿pidió prestado a sus amistades o personas conocidas?</li>
+<li>De julio de 2020 a la fecha, ¿pidió prestado a sus familiares?</li>
+<li>¿Usted tiene tarjeta de crédito bancaria?</li>
+<li>¿Usted tiene crédito personal?</li>
+</ol></li>
+<li><strong>Independientes</strong>:
+<ol type="1">
+<li>Edad:
+<span class="math display">\[\begin{array}{r@{}l}
+\text{Cohorte}_{j = 1}\;\; &amp; \coloneqq \left\{
+\begin{array}{ll}
+0 &amp; \text{si edad} \leq 59, \\
+1 &amp; \text{si edad} \geq 60.
+\end{array}
+\right.
+\\[0.2cm]
+\text{Cohorte}_{j = 2}\;\; &amp; \coloneqq \left\{
+\begin{array}{ll}
+0 &amp; \text{si edad} \leq 59, \\
+1 &amp; \text{si } 60 \leq \text{edad} \leq 69.
+\end{array}
+\right.
+\\[0.2cm]
+\text{Cohorte}_{j = 3}\;\; &amp; \coloneqq \left\{
+\begin{array}{ll}
+0 &amp; \text{si edad} \leq 59, \\
+1 &amp; \text{si } 70 \leq \text{edad} \leq 79.
+\end{array}
+\right.
+\\[0.2cm]
+\text{Cohorte}_{j = 4}\;\; &amp; \coloneqq \left\{
+\begin{array}{ll}
+0 &amp; \text{si edad} \leq 59, \\
+1 &amp; \text{si edad} \geq 80.
+\end{array}
+\right.
+\end{array}\]</span></li>
+<li>Sexo (0 = Hombre, 1 = Mujer).</li>
+<li>Tipo De Localidad:<br> Los habitantes de áreas con una población inferior a 2500 habitantes se clasifican como rurales (0), mientras que los que viven en aquellas que superan esta cifra se consideran urbanos (1).</li>
+<li>Clase Social: <span class="math display">\[\begin{align*}
+\text{Clase Social}_{k = 1} &amp; \coloneqq \left\{
+\begin{array}{ll}
+1 &amp; \text{para clase media} \\
+&amp; \text{(ingreso mensual entre} \\
+&amp; \text{11,344 y 22,297 MXN)}, \\
+0 &amp; \text{en otro caso}.
+\end{array}
+\right. \\[0.2cm]
+\text{Clase Social}_{k = 2} &amp; \coloneqq \left\{
+\begin{array}{ll}
+1 &amp; \text{para clase alta} \\
+&amp; \text{(ingreso mensual mayor o} \\
+&amp; \text{igual a 22,298 MXN)}, \\
+0 &amp; \text{en otro caso}.
+\end{array}
+\right.
+\end{align*}\]</span> Las observaciones con ambos indicadores en <span class="math inline">\(0\)</span> pertenecen a la clase baja, identificada por un ingreso mensual menor o igual a 11,343 MXN.</li>
+<li>Nivel De Escolaridad: <span class="math display">\[\begin{align*}
+\text{Niv. Esc.}_{l = 1} &amp; \coloneqq \left\{
+\begin{array}{ll}
+1 &amp; \text{para educación media}, \\
+&amp; \text{que abarca: estudios técnicos} \\
+&amp; \text{con secundaria terminada}, \\
+&amp; \text{preparatoria o bachillerato}, \\
+0 &amp; \text{en otro caso}.
+\end{array}
+\right. \\[0.2cm]
+\text{Niv. Esc.}_{l = 2} &amp; \coloneqq \left\{
+\begin{array}{ll}
+1 &amp; \text{para educación superior}, \\
+&amp; \text{que comprende: normal básica}, \\
+&amp; \text{estudios técnicos con} \\
+&amp; \text{preparatoria terminada}, \\
+&amp; \text{licenciatura o ingeniería} \\
+&amp; \text{y posgrados como} \\
+&amp; \text{maestría o doctorado}, \\
+0 &amp; \text{en otro caso}.
+\end{array}
+\right.
+\end{align*}\]</span> Cuando ambas variables son <span class="math inline">\(0\)</span>, podemos inferir que el encuestado solamente ha adquirido educación básica. Esta última incluye los siguientes niveles: ninguno, preescolar o kínder, primaria y secundaria.</li>
+</ol></li>
+</ul>
+</section>
+<section id="metodología" class="slide level2 center">
+<h2>Metodología</h2>
+<ol type="1">
+<li>Estadística descriptiva.</li>
+<li>Diferencias porcentuales simples y <em>Probits</em> (<em>Average Marginal Effects</em>).</li>
+<li><em>Propensity Score Matchings</em>.</li>
+<li>Diferencias porcentuales simples y <em>Probits</em> (<em>Average Marginal Effects</em>).</li>
+<li>Análisis de resultados.</li>
+</ol>
+</section>
+<section id="diferencias-porcentuales-simples-left12right" class="slide level2 center">
+<h2>Diferencias porcentuales simples <span class="math inline">\(\left(1/2\right)\)</span></h2>
+<p>Para identificar disparidades por edad:</p>
+<ol type="1">
+<li>División de los grupos en cuatro cohortes:
+<ul>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(\text{edad} \geq 60\right)\)</span>.</li>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(60 \leq \text{edad} \leq 69\right)\)</span>.</li>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(70 \leq \text{edad} \leq 79\right)\)</span>.</li>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(\text{edad} \geq 80\right)\)</span>.</li>
+</ul></li>
+<li>Cálculo de diferencias porcentuales simples: <span class="math display">\[\text{Diferencias porcentuales} = \%\text{No tratados}_{\text{Sí}} - \%\text{Tratados}_{\text{Sí}}\]</span></li>
+</ol>
+</section>
+<section id="diferencias-porcentuales-simples-left22right" class="slide level2 scrollable">
+<h2>Diferencias porcentuales simples <span class="math inline">\(\left(2/2\right)\)</span></h2>
+<p>Para identificar disparidades por sexo en las personas adultas mayores:</p>
+<ol type="1">
+<li>División de los grupos en cuatro cohortes:
+<ul>
+<li><span class="math inline">\(\left[\text{edad} \geq 60\right]\)</span> No tratados (Hombres) vs.&nbsp;Tratadas (Mujeres).</li>
+<li><span class="math inline">\(\left[60 \leq \text{edad} \leq 69\right]\)</span> No tratados (Hombres) vs.&nbsp;Tratadas (Mujeres).</li>
+<li><span class="math inline">\(\left[70 \leq \text{edad} \leq 79\right]\)</span> No tratados (Hombres) vs.&nbsp;Tratadas (Mujeres).</li>
+<li><span class="math inline">\(\left[\text{edad} \geq 80\right]\)</span> No tratados (Hombres) vs.&nbsp;Tratadas (Mujeres).</li>
+</ul></li>
+<li>Cálculo de diferencias porcentuales simples:
+<span class="math display">\[\begin{split}
+\text{Diferencias porcentuales} =&amp; \;\%\text{No tratados}_{\text{Sí}} \\ &amp; \qquad\qquad - \%\text{Tratadas}_{\text{Sí}}
+\end{split}\]</span></li>
+</ol>
+</section>
+<section id="probits" class="slide level2 scrollable">
+<h2><em>Probits</em></h2>
+<p>Para identificar disparidades por edad, controlando por sexo, tipo de localidad, clase social y nivel de escolaridad:</p>
+<ol type="1">
+<li>División de los grupos en cuatro cohortes:
+<ul>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(\text{edad} \geq 60\right)\)</span>.</li>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(60 \leq \text{edad} \leq 69\right)\)</span>.</li>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(70 \leq \text{edad} \leq 79\right)\)</span>.</li>
+<li>No tratados <span class="math inline">\(\left(\text{edad} \leq 59\right)\)</span> vs.&nbsp;Tratados <span class="math inline">\(\left(\text{edad} \geq 80\right)\)</span>.</li>
+</ul></li>
+<li>Estimación de <em>Probits</em>: <span class="math display">\[\begin{multline*}
+P\left(\text{Pregunta}_i = 1 \mid \mathbb{X}\right) = \Phi\Biggl( \beta_0 + \beta_1 \text{Cohorte}_j \\ + \beta_2 \left(\text{Tipo De Localidad}\right) + \beta_3 \text{Sexo} \\ + \sum_{k=1}^{2} \beta_{3+k} \left(\text{Clase Social}_{k}\right) \\ + \sum_{l=1}^{2} \beta_{5+l} \left(\text{Nivel De Escolaridad}_{l}\right) \Biggr).
+\end{multline*}\]</span></li>
+<li>Cálculo de <em>Average Marginal Effects</em>:
+<span class="math display">\[\begin{split}
+\text{AME}_{x_a} &amp;= \frac{1}{N} \sum_{n=1}^{N} \frac{\partial \left(P\left(\text{Pregunta}_i = 1 \mid \mathbb{X}\right)\right)}{\partial x_a} \\ &amp;= \frac{1}{N} \sum_{n=1}^{N} \phi\Biggl( \beta_0 + \beta_1 \text{Cohorte}_{j,\,n} \\ &amp; \quad\quad+ \beta_2 \left(\text{Tipo De Localidad}_n\right) + \beta_3 \text{Sexo}_n \\ &amp; \quad\quad+ \sum_{k=1}^{2} \beta_{3+k} \left(\text{Clase Social}_{k,\,n}\right) \\ &amp; \quad\quad+ \sum_{l=1}^{2} \beta_{5+l} \left(\text{Nivel De Escolaridad}_{l,\,n}\right) \Biggr) \beta_a.
+\end{split}\]</span></li>
+</ol>
+</section>
+<section id="resultados-left15right" class="slide level2 center">
+<h2>Resultados <span class="math inline">\(\left(1/5\right)\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Tabla1.png" class="quarto-figure quarto-figure-center" width="900" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="resultados-left25right" class="slide level2 center">
+<h2>Resultados <span class="math inline">\(\left(2/5\right)\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Tabla2.png" class="quarto-figure quarto-figure-center" width="900" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="resultados-left35right" class="slide level2 center">
+<h2>Resultados <span class="math inline">\(\left(3/5\right)\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Tabla3.png" class="quarto-figure quarto-figure-center" width="900" height="620"></p>
+</figure>
+</div>
+</section>
+<section id="resultados-left45right" class="slide level2 center">
+<h2>Resultados <span class="math inline">\(\left(4/5\right)\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Tabla4.png" class="quarto-figure quarto-figure-center" width="900" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="resultados-left55right" class="slide level2 center">
+<h2>Resultados <span class="math inline">\(\left(5/5\right)\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Tabla5.png" class="quarto-figure quarto-figure-center" width="900" height="450"></p>
+</figure>
+</div>
+</section>
+<section id="discusión" class="slide level2">
+<h2>Discusión</h2>
+<div class="r-stack">
+<p><img data-src="img/RazonAdquirio.png" class="fragment" width="1000" height="600"></p>
+<p><img data-src="img/RazonNoTiene.png" class="fragment" width="1000" height="600"></p>
+<p><img data-src="img/RazonDejo.png" class="fragment" width="1000" height="600"></p>
+</div>
+</section>
+<section id="limitaciones" class="slide level2 center">
+<h2>Limitaciones</h2>
+<ol type="1">
+<li><strong>Tamaño de muestra pequeño:</strong> baja representatividad de individuos de avanzada edad en la base de datos.</li>
+<li><strong>Falta de datos por parte de la oferta.</strong></li>
+</ol>
+</section>
+<section id="gracias-por-su-atención" class="slide level2 center">
+<h2>¡Gracias por su atención!</h2>
 
 <div class="quarto-auto-generated-content">
 <p><img src="logo_cide.png" class="slide-logo"></p>
@@ -390,7 +629,7 @@ Alejandro Romero González
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -400,7 +639,7 @@ Alejandro Romero González
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -449,7 +688,7 @@ Alejandro Romero González
         center: false,
 
         // Enables touch navigation on devices with touch input
-        touch: true,
+        touch: false,
 
         // Loop the presentation
         loop: false,
@@ -522,7 +761,7 @@ Alejandro Romero González
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -550,7 +789,7 @@ Alejandro Romero González
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

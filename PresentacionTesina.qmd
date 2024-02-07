@@ -6,6 +6,10 @@ format:
     theme: tema.scss
     slide-number: true
     show-slide-number: all 
+    touch: false
+    controls: true
+    transition: slide
+    html-math-method: mathjax
 author: 
   - name: "Alejandro Romero González"
     email: "alejandro.romero@alumnos.cide.edu"
@@ -16,14 +20,213 @@ author:
 logo: logo_cide.png
 ---
 
-## Motivación
+## Motivaciones {.center}
+-   Atender el envejecimiento poblacional.
+-   Llenar un vacío en la literatura existente.
+-   Explorar las dimensiones del concepto de *edadismo* en el ámbito financiero.
+-   Informar y mejorar políticas públicas.
+-   Promover la inclusión financiera.
 
--   Informar las políticas públicas
--   Comprender factores y mecanismos que influyen en la inclusión financiera
--   Promover la equidad
--   Agenda 2030: “No dejar a nadie atrás”
+## **Pregunta de investigación** e hipótesis {.center}
+**¿Existen disparidades financieras significativas entre las personas adultas mayores $\left(\text{edad} \geq 60\right)$ y las personas jóvenes $\left(\text{edad} \leq 59\right)$ dentro del mercado financiero mexicano?**<p></p>
+Postulamos la existencia de estas desigualdades; no obstante, no asumimos que estos desfases sean intrínsecamente manifestaciones de *edadismo*. Es plausible que sean resultado de factores estructurales complejos.<p></p>
+Adicionalmente, este trabajo se extendió para considerar la intersección de la edad y el sexo. De manera específica, investigamos cómo el sexo puede influir en las experiencias financieras de las personas mayores.
 
-## Pregunta de investigación e hipótesis
+## Revisión de literatura
+::: {.r-stack}
+![](img/Keynes.png){.fragment width="450" height="550"}
+![](img/LifeCycle.png){.fragment width="450" height="550"}
 
-¿Existe discriminación por edad en el sistema financiero mexicano?
-Hay evidencia de discriminación sistemática por edad en el sector financiero, la cual se puede inferir a través de las respuestas de la ENIF.
+![](img/NavaHam.png){.fragment width="450" height="550"}
+![](img/Ang.png){.fragment width="450" height="550"}
+
+![](img/HernandezMartinez.png){.fragment width="450" height="550"}
+![](img/Peterson.png){.fragment width="450" height="550"}
+
+![](img/Myers.png){.fragment width="450" height="550"}
+![](img/DunsonReed.png){.fragment width="450" height="550"}
+
+![](img/CNBV.png){.fragment width="550" height="620"}
+:::
+
+## Datos
+![](img/enif2021.jpg){.r-stretch}
+
+## Variables de interés {.scrollable}
+
+- **Dependientes**:
+    1. ¿Usted tiene un celular inteligente (smartphone)?
+    2. La última vez que no pudo cubrir sus gastos, ¿usted utilizó su tarjeta de crédito o solicitó un crédito en un banco o institución financiera?
+    3. De julio de 2020 a la fecha, ¿usted ahorró comprando animales o bienes?
+    4. De julio de 2020 a la fecha, ¿usted guardó dinero con familiares o personas conocidas?
+    5. De julio de 2020 a la fecha, ¿usted participó en una tanda?
+    6. De julio de 2020 a la fecha, ¿usted guardó dinero en su casa?
+    7. ¿Usted tiene cuenta o tarjeta de nómina (donde depositan su sueldo)?
+    8. ¿Usted tiene cuenta o tarjeta de pensión (donde depositan su pensión)?
+    9. ¿Usted tiene cuenta o tarjeta para recibir apoyos de gobierno?
+    10. ¿Usted tiene cuenta de ahorro?
+    11. ¿Con su cuenta o tarjeta para recibir apoyos de gobierno tiene tarjeta de débito (tarjeta de plástico con la que puede retirar dinero)?
+    12. De julio de 2020 a la fecha, ¿pidió prestado a sus amistades o personas conocidas?
+    13. De julio de 2020 a la fecha, ¿pidió prestado a sus familiares?
+    14. ¿Usted tiene tarjeta de crédito bancaria?
+    15. ¿Usted tiene crédito personal?
+
+- **Independientes**:
+    1. Edad:
+\begin{array}{r@{}l}
+\text{Cohorte}_{j = 1}\;\; & \coloneqq \left\{
+\begin{array}{ll}
+0 & \text{si edad} \leq 59, \\
+1 & \text{si edad} \geq 60.
+\end{array}
+\right.
+\\[0.2cm]
+\text{Cohorte}_{j = 2}\;\; & \coloneqq \left\{
+\begin{array}{ll}
+0 & \text{si edad} \leq 59, \\
+1 & \text{si } 60 \leq \text{edad} \leq 69.
+\end{array}
+\right.
+\\[0.2cm]
+\text{Cohorte}_{j = 3}\;\; & \coloneqq \left\{
+\begin{array}{ll}
+0 & \text{si edad} \leq 59, \\
+1 & \text{si } 70 \leq \text{edad} \leq 79.
+\end{array}
+\right.
+\\[0.2cm]
+\text{Cohorte}_{j = 4}\;\; & \coloneqq \left\{
+\begin{array}{ll}
+0 & \text{si edad} \leq 59, \\
+1 & \text{si edad} \geq 80.
+\end{array}
+\right.
+\end{array}
+    2. Sexo (0 = Hombre, 1 = Mujer).
+    3. Tipo De Localidad:<br>
+      Los habitantes de áreas con una población inferior a 2500 habitantes se clasifican como rurales (0), mientras que los que viven en aquellas que superan esta cifra se consideran urbanos (1).
+    4. Clase Social:
+\begin{align*}
+\text{Clase Social}_{k = 1} & \coloneqq \left\{
+\begin{array}{ll}
+1 & \text{para clase media} \\
+  & \text{(ingreso mensual entre} \\
+  & \text{11,344 y 22,297 MXN)}, \\
+0 & \text{en otro caso}.
+\end{array}
+\right. \\[0.2cm]
+\text{Clase Social}_{k = 2} & \coloneqq \left\{
+\begin{array}{ll}
+1 & \text{para clase alta} \\
+  & \text{(ingreso mensual mayor o} \\
+  & \text{igual a 22,298 MXN)}, \\
+0 & \text{en otro caso}.
+\end{array}
+\right.
+\end{align*}
+      Las observaciones con ambos indicadores en $0$ pertenecen a la clase baja, identificada por un ingreso mensual menor o igual a 11,343 MXN.
+    5. Nivel De Escolaridad:
+\begin{align*}
+\text{Niv. Esc.}_{l = 1} & \coloneqq \left\{
+\begin{array}{ll}
+1 & \text{para educación media}, \\
+  & \text{que abarca: estudios técnicos} \\
+  & \text{con secundaria terminada}, \\
+  & \text{preparatoria o bachillerato}, \\
+0 & \text{en otro caso}.
+\end{array}
+\right. \\[0.2cm]
+\text{Niv. Esc.}_{l = 2} & \coloneqq \left\{
+\begin{array}{ll}
+1 & \text{para educación superior}, \\
+  & \text{que comprende: normal básica}, \\
+  & \text{estudios técnicos con} \\
+  & \text{preparatoria terminada}, \\
+  & \text{licenciatura o ingeniería} \\
+  & \text{y posgrados como} \\
+  & \text{maestría o doctorado}, \\
+0 & \text{en otro caso}.
+\end{array}
+\right.
+\end{align*}
+      Cuando ambas variables son $0$, podemos inferir que el encuestado solamente ha adquirido educación básica. Esta última incluye los siguientes niveles: ninguno, preescolar o kínder, primaria y secundaria.
+
+
+## Metodología {.center}
+1. Estadística descriptiva.
+2. Diferencias porcentuales simples y *Probits* (*Average Marginal Effects*).
+3. *Propensity Score Matchings*.
+4. Diferencias porcentuales simples y *Probits* (*Average Marginal Effects*).
+5. Análisis de resultados.
+
+## Diferencias porcentuales simples $\left(1/2\right)$ {.center}
+Para identificar disparidades por edad:
+
+1. División de los grupos en cuatro cohortes:
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(\text{edad} \geq 60\right)$.
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(60 \leq \text{edad} \leq 69\right)$.
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(70 \leq \text{edad} \leq 79\right)$.
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(\text{edad} \geq 80\right)$.
+2. Cálculo de diferencias porcentuales simples:
+$$\text{Diferencias porcentuales} = \%\text{No tratados}_{\text{Sí}} - \%\text{Tratados}_{\text{Sí}}$$
+
+## Diferencias porcentuales simples $\left(2/2\right)$ {.scrollable}
+Para identificar disparidades por sexo en las personas adultas mayores:
+
+1. División de los grupos en cuatro cohortes:
+    - $\left[\text{edad} \geq 60\right]$ No tratados (Hombres) vs. Tratadas (Mujeres).
+    - $\left[60 \leq \text{edad} \leq 69\right]$ No tratados (Hombres) vs. Tratadas (Mujeres).
+    - $\left[70 \leq \text{edad} \leq 79\right]$ No tratados (Hombres) vs. Tratadas (Mujeres).
+    - $\left[\text{edad} \geq 80\right]$ No tratados (Hombres) vs. Tratadas (Mujeres).
+2. Cálculo de diferencias porcentuales simples: 
+\begin{split}
+\text{Diferencias porcentuales} =& \;\%\text{No tratados}_{\text{Sí}} \\ & \qquad\qquad - \%\text{Tratadas}_{\text{Sí}}
+\end{split}
+    
+## *Probits* {.scrollable}
+Para identificar disparidades por edad, controlando por sexo, tipo de localidad, clase social y nivel de escolaridad:
+
+1. División de los grupos en cuatro cohortes:
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(\text{edad} \geq 60\right)$.
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(60 \leq \text{edad} \leq 69\right)$.
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(70 \leq \text{edad} \leq 79\right)$.
+    - No tratados $\left(\text{edad} \leq 59\right)$ vs. Tratados $\left(\text{edad} \geq 80\right)$.
+2. Estimación de *Probits*:
+\begin{multline*}
+P\left(\text{Pregunta}_i = 1 \mid \mathbb{X}\right) = \Phi\Biggl( \beta_0 + \beta_1 \text{Cohorte}_j \\ + \beta_2 \left(\text{Tipo De Localidad}\right) + \beta_3 \text{Sexo} \\ + \sum_{k=1}^{2} \beta_{3+k} \left(\text{Clase Social}_{k}\right) \\ + \sum_{l=1}^{2} \beta_{5+l} \left(\text{Nivel De Escolaridad}_{l}\right) \Biggr).
+\end{multline*}
+3. Cálculo de *Average Marginal Effects*:
+\begin{split}
+\text{AME}_{x_a} &= \frac{1}{N} \sum_{n=1}^{N} \frac{\partial \left(P\left(\text{Pregunta}_i = 1 \mid \mathbb{X}\right)\right)}{\partial x_a} \\ &= \frac{1}{N} \sum_{n=1}^{N} \phi\Biggl( \beta_0 + \beta_1 \text{Cohorte}_{j,\,n} \\ & \quad\quad+ \beta_2 \left(\text{Tipo De Localidad}_n\right) + \beta_3 \text{Sexo}_n \\ & \quad\quad+ \sum_{k=1}^{2} \beta_{3+k} \left(\text{Clase Social}_{k,\,n}\right) \\ & \quad\quad+ \sum_{l=1}^{2} \beta_{5+l} \left(\text{Nivel De Escolaridad}_{l,\,n}\right) \Biggr) \beta_a.
+\end{split}
+
+## Resultados $\left(1/5\right)$ {.center}
+![](img/Tabla1.png){fig-align="center" width="900" height="600"}
+
+## Resultados $\left(2/5\right)$ {.center}
+![](img/Tabla2.png){fig-align="center" width="900" height="600"}
+
+## Resultados $\left(3/5\right)$ {.center}
+![](img/Tabla3.png){fig-align="center" width="900" height="620"}
+
+## Resultados $\left(4/5\right)$ {.center}
+![](img/Tabla4.png){fig-align="center" width="900" height="400"}
+
+## Resultados $\left(5/5\right)$ {.center}
+![](img/Tabla5.png){fig-align="center" width="900" height="450"}
+
+## Discusión
+::: {.r-stack}
+![](img/RazonAdquirio.png){.fragment width="1000" height="600"}
+
+![](img/RazonNoTiene.png){.fragment width="1000" height="600"}
+
+![](img/RazonDejo.png){.fragment width="1000" height="600"}
+:::
+
+## Limitaciones {.center}
+
+1. **Tamaño de muestra pequeño:** baja representatividad de individuos de avanzada edad en la base de datos.
+2. **Falta de datos por parte de la oferta.**
+
+## ¡Gracias por su atención! {.center}
